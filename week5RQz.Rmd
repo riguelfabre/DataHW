@@ -1,0 +1,182 @@
+---
+title: "Wk5R_QZ"
+author: "Riguel"
+date: "07/02/2014"
+output: html_document
+---
+
+**Indempotant Matrix** is when a matrix can be multiplied by itself and yields the same matrix.      
+
+
+
+**Orthogonal** is when the transpose of the matrix is equals to its inverse.
+
+
+###MatrixA
+
+```{r Matrix A, fig.height=4, fig.width=4}
+A <- matrix(c(1,-1,-1,-1),2)
+A
+
+#Indempotency of A
+Aimp = A*A
+Aimp
+
+# inverse of A
+Ai = solve(A)
+Ai
+
+# transpose of A
+At = t(A)
+At
+```
+**Matrix A is not Indempotent**
+
+
+**Matrix A is not Orthogonal**
+
+
+###Matrix B
+
+```{r Matrix B, fig.height=4, fig.width=4}
+B <- matrix(c(2,-1,3,-2),2)
+B
+
+#Indempotency of B
+Bimp = B*B
+Bimp
+
+# inverse of B
+Bi = solve(B)
+Bi
+
+# transpose of B
+Bt = t(B)
+Bt
+```
+**Matrix B is not Indempotent**
+
+**Matrix B is not Orthogonal**
+
+###Matrix C
+
+```{r Matrix C, fig.height=4, fig.width=4}
+C <- matrix(c(1,0,0,0),2)
+C
+
+#Indempotency of C
+Cimp = C*C
+Cimp
+
+# inverse of C connot be done
+
+
+# transpose of C
+Ct = t(C)
+Ct
+```
+**Matrix C is Indempotent**
+
+
+**Matrix C is not Orthogonal**
+
+
+###Matrix D
+
+```{r Matrix D, fig.height=4, fig.width=4}
+D <- matrix(c(0,1,0,1,0,0,0,0,1),3)
+D
+
+#Indempotency of D
+Dimp = D*D
+Dimp
+
+# inverse of D
+Di = solve(D)
+Di
+
+# transpose of D
+Dt = t(D)
+Dt
+```
+
+**Matrix D is Indempotent**
+
+
+**Matrix D is Othogonal**
+
+
+###Matrix E
+
+```{r Matrix E, fig.height=4, fig.width=4}
+E <- matrix(c(1,0,0,0,0,1,0,1,0),3)
+E
+
+#Indempotency of E
+Eimp = E*E
+Eimp
+
+# inverse of E
+Ei = solve(E)
+Ei
+
+# transpose of E
+Et = t(E)
+Et
+
+```
+**Matrix E is Indempotent**
+
+
+**Matrix E is Othogonal**
+
+
+##List with five different Structures
+
+###Vector
+
+```{r Vector, fig.height=4, fig.width=4}
+Vect <-c(1:10)
+Vect
+```
+
+
+###Matrix
+
+```{r Matrix, fig.height=4, fig.width=4}
+Mtrx <- matrix(c(1,0,0,0,0,1,0,1,0),3)
+Mtrx
+```
+
+###Array
+
+```{r Array, fig.height=4, fig.width=4}
+Arr <- array(1:12, dim = c(2,3,4))
+Arr
+```
+
+###Data Frame
+
+```{r Data Frame, fig.height=4, fig.width=4}
+x <- 1:10
+y <- -4:5
+z <- -1:-10
+DF <- data.frame(x,y,z)
+DF
+```
+
+
+###List 
+
+```{r List, fig.height=4, fig.width=4}
+lst <- list(1,2,3)
+lst
+```
+
+
+###List with the five structures 
+
+```{r List5, fig.height=4, fig.width=4}
+list5 <- list(Vect,Mtrx,Arr,DF,lst)
+list5
+```
