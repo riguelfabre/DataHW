@@ -1,0 +1,76 @@
+---
+title: "WK5R_Assgn"
+author: "Riguel"
+date: "07/04/2014"
+output: html_document
+---
+
+#Appending vs Preallocating in R
+Appending to a R structure such as a list, vector or data.frame is fine, however doing it repeatedly can be computationally taxing. Preallocating is best for speed performance.
+
+##Preallocating
+
+Demonstrating the preallocation of vectors, dataframes and lists. 
+
+###Vector
+```{r Vector_p}
+Vp <-c(1,2,6,3)
+Vp
+```
+
+###Matrix
+```{r Matrix_p}
+Mp <-matrix(c(1,2,2,2),2)
+Mp
+```
+
+###List
+```{r List_p}
+Lp <-list(1,2,3,4)
+Lp
+```
+
+
+##Appending
+
+###Vector
+```{r Vector_a}
+Va <-c()
+Va
+```
+
+**Appending a vector**
+```{r Vector_a2}
+Va <- append(Va,5)
+Va
+
+Va <- append(Va,10)
+Va
+```
+
+###Matrix
+```{r Matrix_a}
+Ma <-matrix(c(1,0,1,0,0,1,0,0),2)
+Ma
+```
+
+**Appending a Matrix**
+```{r Matrix_a2}
+Ma <- cbind(Ma, Va)
+Ma
+
+```
+
+
+###List
+```{r List_a}
+La <-list()
+La
+```
+
+**Appending a List**
+```{r List_a2}
+La <- append(La, Va)
+La
+
+```
